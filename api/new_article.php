@@ -21,4 +21,4 @@ $link = htmlspecialchars($_POST["link"]);
 
 
 
-$db -> query("INSERT INTO internetnews_articles (title, description, link, active) VALUES ('%s', '%s', '%s', 0)", [$title, $description, $link]);
+$db -> query("INSERT INTO internetnews_articles (title, description, link, active) VALUES ('%s', '%s', '%s', '%s')", [$title, $description, $link, 0]);
