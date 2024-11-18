@@ -8,7 +8,7 @@ include_once(dirname(path: __FILE__) . "/utils/database.php");
 
 $db = new Database;
 
-$showInnactives = $_GET["showInnactives"] == 1;
+$showInnactives = isset($_GET["showInnactives"]) && $_GET["showInnactives"] == 1;
 
 if ($showInnactives) {
     $articles = $db-> query("SELECT * FROM internetnews_articles");
