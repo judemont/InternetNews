@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New article | InternetNews</title>
+</head>
+<body>
+    <h1>Suggest a new article</h1>
+    <form action="api/new_news.php" method="post">
+        <label>
+            Title: 
+            <input name="title" type="text" required maxlength="255">
+        </label>
+        <label>
+            Description: 
+            <input name="description" type="text" maxlength="1000" required>
+        </label>
+        <label>
+            Link: 
+            <input name="link" type="url" maxlength="1000" required>
+        </label>
+    </form>
+</body>
+</html>
