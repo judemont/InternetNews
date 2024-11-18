@@ -11,9 +11,9 @@ $db = new Database;
 $showInnactives = isset($_GET["showInnactives"]) && $_GET["showInnactives"] == 1;
 
 if ($showInnactives) {
-    $articles = $db-> query("SELECT * FROM internetnews_articles");
+    $articles = $db-> select("SELECT * FROM internetnews_articles");
 } else {
-    $articles = $db-> query("SELECT * FROM internetnews_articles WHERE active = 1");
+    $articles = $db-> select("SELECT * FROM internetnews_articles WHERE active = 1");
 }
 
 echo json_encode($articles);
